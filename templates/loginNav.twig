@@ -1,0 +1,15 @@
+<script>
+document.getElementById('login_form').insertAdjacentHTML('beforeBegin', `
+    {% if pluginTitle %}
+    <h3>{{ pluginTitle }}</h3>
+    {% endif %}
+    <p>
+        <a href="{{ href }}" class="btn">
+            {{ pluginButton ?: 'SimpleSAMLphp Log In' }}
+        </a>
+    </p>
+    {% if defaultTitle %}
+    <h3>{{ defaultTitle }}</h3>
+    {% endif %}
+`);
+</script>
